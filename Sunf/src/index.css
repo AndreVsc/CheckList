@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+button{
+    cursor: pointer;
+}
+
+li{
+    list-style:none;
+}
+
+@media only screen and (max-device-width: 900px) {
+    *{
+        margin: 0;
+        padding: 0;
+        overflow-y:visible;
+    }
+    
+    p{
+        font-size: x-small;
+    }
+
+    button{
+        font-size: x-small;
+    }
+
+    input{
+        font-size: x-small;
+    }
+}

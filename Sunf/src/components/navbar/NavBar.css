@@ -1,0 +1,46 @@
+.Navbar-container {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: 60px;
+    background-color: rgb(79, 81, 97);
+    border-radius: 0px 0px 7px 7px;
+    padding: 0 30px; /* Ajuste conforme necessário */
+  }
+  
+  .Navbar-container img {
+    width: 17px;
+    height: 17px;
+    filter: invert(1);
+  }
+  
+  .Navbar-ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+  }
+  
+  .circle-button {
+    background-color: #3498db00; /* Cor de fundo do botão */
+    border: none;
+    border-radius: 50%; /* Torna o botão circular */
+    padding: 10px; /* Ajuste conforme necessário */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: aliceblue;
+  }
+  
+  .circle-button:hover {
+    background-color: #28282858; /* Cor de fundo do botão ao passar o mouse */
+  }
+  
+  .Navbar-container a:active {
+    opacity: 0.70;
+  }
+  

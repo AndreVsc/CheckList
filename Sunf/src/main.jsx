@@ -4,6 +4,7 @@ import ErrorPage from './routes/ErrorPage.jsx';
 import { createBrowserRouter, RouterProvider ,} from 'react-router-dom';
 import './index.css';
 import HomePage from './routes/HomePage.jsx';
+import FormBlock from './components/forms/FormBlock.jsx';
 
 const router = createBrowserRouter ([
   {
@@ -11,6 +12,11 @@ const router = createBrowserRouter ([
     element: <HomePage/>,
     errorElement: <ErrorPage />,
   },
+  {
+    path: "/FormBlock",
+    element: <FormBlock/>,
+    errorElement: <ErrorPage />,
+  }
 ]);
 
 

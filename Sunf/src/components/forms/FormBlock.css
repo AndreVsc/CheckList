@@ -13,7 +13,7 @@
 }
 
 /* Estilos para o formulário pop-up */
-.overlayForm .containerForm {
+.containerForm {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -26,8 +26,6 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-
-
 #inputBnt{
     padding: 10px;
     text-align: center;
@@ -35,7 +33,7 @@
     overflow: hidden;
 }
 
-#formEstoque{
+#formCollection{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,7 +44,7 @@
     max-width: 400px;
 }
 
-#inputsEstoque{
+#inputsCollection{
     display: flex;
     flex-wrap: wrap;
     max-width: 380px;
@@ -91,7 +89,7 @@
     height: 15px;
 }
 
-#inputChild-7{
+.inputChild-7{
     width: 100%;
     max-width:162px;
     height: 15px;
@@ -103,17 +101,4 @@
     padding: 10px;
     border: 1px solid #c9c9c9;
     outline: none;
-}
-
-.inputArea{
-    width: 100%;
-    max-width: 370px;
-    height: 140px;
-    border-radius: 21px;
-    padding: 10px;
-    border: 1px solid #c9c9c9;
-    outline: none;
-    color: #727272;
-    text-align: start;
-    resize:none;
 }

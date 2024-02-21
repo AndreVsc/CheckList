@@ -11,8 +11,8 @@ export default function FormBlock({reset}) {
   return (
     <div className="overlayForm" >
       <div className='containerForm'>
-        <form id='formEstoque'>
-          <div id='inputsEstoque'>
+        <form id='formCollection'>
+          <div id='inputsCollection'>
             <input className='inputChild inputText' name='produto' type="text" placeholder='Nome do Produto' />
             <input className='inputChild-2 inputText' name='marca' type="text" placeholder='Marca'/>
             <input className='inputChild-3 inputText' name='quantidade' type="number" placeholder='Quantidade'/>

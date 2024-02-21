@@ -28,14 +28,13 @@ export default function MenuCheck() {
 
     return (
         <>
-            <div className='containerAdicionar'>
+            <div className='containerMenu'>
                 <div id='containerRolagem'>                
                     {block==''?(<p className='textp'>Nenhum Produto</p>):(<p>Teste</p>)}
                 </div>
                 <div className='settingsAdicionar'>
                     <Button func={() => showAll()} value={<AiOutlineLeft fontSize={15} />} classN='bnt-b' />
                 </div>
-                {show && <FormBlock reset={setShow}/>}
             </div>
         </>
     );

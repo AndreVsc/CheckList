@@ -1,0 +1,28 @@
+.bnt-w{
+    border: 0;
+    padding: 10px;
+    border-radius: 11px;
+    background-color: aliceblue;
+    box-shadow: 1px 1px 5px rgb(87, 87, 87);
+}
+
+.bnt-b{
+    border: 0;
+    padding: 7px;
+    border-radius: 11px;
+    background-color: rgb(25, 113, 189);
+    color: #fff;
+}
+
+.bntd{
+    display: flex;
+    justify-content: center;
+    border: 0;
+    padding: 7px;
+    border-radius: 11px;
+    background-color: rgb(25, 113, 189);
+    color: #fff;
+    width: 100px;
+    padding: 10px;  
+
+}

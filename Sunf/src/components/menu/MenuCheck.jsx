@@ -1,7 +1,7 @@
 import React,{useEffect,useState} from 'react';
 import Button from '../button/Button';
 import {AiOutlineLeft} from 'react-icons/ai';
-import FormBlock from '../forms/FormBlock';
+import './MenuCheck.css';
 
 
 export default function MenuCheck() {
@@ -29,10 +29,9 @@ export default function MenuCheck() {
     return (
         <>
             <div className='containerMenu'>
-                <div id='containerRolagem'>                
+                <div className='menuPrincipal'>                
                     {block==''?(<p className='textp'>Nenhum Produto</p>):(<p>Teste</p>)}
-                </div>
-                <div className='settingsAdicionar'>
+
                     <Button func={() => showAll()} value={<AiOutlineLeft fontSize={15} />} classN='bnt-b' />
                 </div>
             </div>

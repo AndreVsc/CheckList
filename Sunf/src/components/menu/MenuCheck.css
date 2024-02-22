@@ -1,7 +1,12 @@
 .containerMenu{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-items: center;
-    justify-content: center;
+    max-height: 100vw;
+    max-width: 100vh;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.menuPrincipal{
+    border: 1ps solid black;
 }

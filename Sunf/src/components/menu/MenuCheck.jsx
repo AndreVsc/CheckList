@@ -1,6 +1,6 @@
 import React,{useEffect,useState} from 'react';
 import Button from '../button/Button';
-import {AiOutlineLeft} from 'react-icons/ai';
+import {FaPlus} from 'react-icons/fa';
 import './MenuCheck.css';
 import FormBlock from '../forms/FormBlock';
 
@@ -30,10 +30,10 @@ export default function MenuCheck() {
         <>
             <div className='containerMenu'>
                 <div className='menuPrincipal'>                
-                    {collection==''?(<p className='textp'>Nenhum Produto</p>):(<p>Teste</p>)}
-                    <Button func={() => showAll()} value={<AiOutlineLeft fontSize={15} />} classN='bnt-b' />
+                    {collection==''?(<p className='textp'>Nenhum Coleção</p>):(<p>Teste</p>)}
+                    <Button func={() => showAll()} value={<FaPlus fontSize={15} />} classN='bnt-b' />
                 </div>
-                {show && <FormBlock reset={setShow}/>}
+                {show && <FormBlock reset={setShow} />}
             </div>
         </>
     );

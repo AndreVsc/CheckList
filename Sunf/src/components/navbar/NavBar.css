@@ -2,7 +2,8 @@
     display: flex; 
     align-items: center;
     justify-content: space-between;
-    width: 100vw;
+    min-width: 100vw;
+    max-width: 100vw;
     height: 60px;
     background-color: rgb(79, 81, 97);
     border-radius: 0px 0px 7px 7px;
@@ -16,10 +17,10 @@
   }
   
   .Navbar-ul {
+    display: flex;
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex;
     gap: 30px;
   }
   

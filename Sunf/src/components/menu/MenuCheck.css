@@ -1,13 +1,19 @@
-.containerMenu{
+/* MenuCheck.css */
+
+.containerMenu {
     display: flex;
-    min-height: 200%;
+    height: 100%;
     padding: 10px;
-    margin:30px 30px;
+    margin: 30px 30px;
     align-items: center;
     justify-content: center;
-    background-color: pink;
+    text-align: center;
+    position: relative;
+    z-index: 1001; /* Certifique-se de que este z-index seja maior que o z-index do overlayForm */
 }
 
-.menuPrincipal{
-
+.menuPrincipal {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }

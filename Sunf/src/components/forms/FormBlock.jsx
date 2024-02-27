@@ -4,7 +4,9 @@ import Button from '../button/Button';
 import { ImCross } from "react-icons/im";
 import { FaCheck } from "react-icons/fa";
 
-export default function FormBlock({ reset }) {
+const COLLECTION_DATA_KEY = 'keyCollectionData';
+
+export default function FormBlock({ reset, updateFlag, setUpdateFlag }) {
     const isMounted = useRef(true);
     const [collectionName, setCollectionName] = useState({});
     const [instituicao, setInstituicao] = useState('senai');
@@ -13,13 +15,13 @@ export default function FormBlock({ reset }) {
 
     useEffect(() => {
         isMounted.current = true;
-        setCollectionData(JSON.parse(localStorage.getItem('keyCollectionData')) || []);
+        setCollectionData(JSON.parse(localStorage.getItem(COLLECTION_DATA_KEY)) || []);
         setId(parseInt(localStorage.getItem('keyCollectionsId')) || 0);
 
         return () => {
             isMounted.current = false;
         };
-    }, []);
+    }, [updateFlag]);
 
     function enviarProdutos() {
         if (isMounted.current) {
@@ -27,11 +29,14 @@ export default function FormBlock({ reset }) {
             const newData = [...collectionData, novoProduto];
 
             setCollectionData(newData);
-            localStorage.setItem('keyCollectionData', JSON.stringify(newData));
+            localStorage.setItem(COLLECTION_DATA_KEY, JSON.stringify(newData));
             localStorage.setItem('keyCollectionsId', id + 1);
 
             setId(prevId => prevId + 1);
             reset(false);
+
+            // Atualizar o sinalizador de atualização
+            setUpdateFlag(prevFlag => !prevFlag);
         }
     }
 

@@ -1,16 +1,16 @@
 import React from 'react';
 
-function CollectionBlock() {
+function CollectionBlock({ collections }) {
   return (
     <>
-        <ul id='listBlocks'>
-            {blocos.map((bloco) => (
-            <li key={bloco.id}>
-                <p id='idBlock'>{bloco.venda} R$</p>
-                <p onClick={() => mostrarDetalhes(bloco.id)} className='nomeProduto'>{bloco.produto}</p>
-            </li>
-            ))}
-        </ul>
+      <ul id='collectionList' to={'/estoque'}>
+        {collections.map((collection) => (
+          <li key={collection.id}>
+            <p id='collectionName'>{collection.nome}</p>
+            <p id='collectionInst'>{collection.instituicao}</p>
+          </li>
+        ))}
+      </ul>
     </>
   );
 }

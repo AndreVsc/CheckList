@@ -1,7 +1,19 @@
-.containerMenu{
+/* MenuCheck.css */
+
+.containerMenu {
+    display: flex;
+    height: 100%;
+    padding: 10px;
+    margin: 30px 30px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    z-index: 1001; /* Certifique-se de que este z-index seja maior que o z-index do overlayForm */
+}
+
+.menuPrincipal {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-items: center;
-    justify-content: center;
+    gap: 50px;
 }

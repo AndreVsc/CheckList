@@ -1,27 +1,35 @@
+import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import ErrorPage from './routes/ErrorPage.jsx';
-import { createBrowserRouter, RouterProvider ,} from 'react-router-dom';
-import './index.css';
-import HomePage from './routes/HomePage.jsx';
-import FormBlock from './components/forms/FormBlock.jsx';
+import {createBrowserRouter,RouterProvider,} from "react-router-dom";
 
-const router = createBrowserRouter ([
+//
+import ErrorPage from './routes/ErrorPage.jsx';
+import HomePage from './routes/HomePage.jsx';
+import Checklist from './routes/Checklist.jsx';
+import App from './app/app.jsx';
+
+const router = createBrowserRouter([
   {
-    path: "/",
-    element: <HomePage/>,
+    element: <App />,
     errorElement: <ErrorPage />,
-  },
-  {
-    path: "/FormBlock",
-    element: <FormBlock/>,
-    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "/",
+        element: <HomePage />,
+      },
+      {
+        path: "/:id",
+        element: <Checklist />, // Use the Checklist component here
+      }
+    ],
   }
 ]);
 
 
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-     <RouterProvider router={router} />
+    <RouterProvider router={router} />
   </React.StrictMode>,
-)
+);

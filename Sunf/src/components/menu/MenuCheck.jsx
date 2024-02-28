@@ -7,9 +7,8 @@ import CollectionBlock from '../collection/CollectionBlock';
 
 const COLLECTION_DATA_KEY = 'keyCollectionData';
 
-export default function MenuCheck() {
+export default function MenuCheck({showAll,setShow,show}) {
     const [collections, setCollections] = useState([]);
-    const [show, setShow] = useState(false);
     const [updateFlag, setUpdateFlag] = useState(false); // Novo estado para sinalizar atualizações
 
     useEffect(() => {
@@ -31,27 +30,18 @@ export default function MenuCheck() {
         };
     }, [updateFlag]);
 
-    function showAll() {
-        setShow(true);
-    }
-
     useEffect(() => {
         if (show) {
             return () => {
                 setShow(false);
             };
         }
-    }, [show]);
+      }, [show]);
 
     return (
         <div className='containerMenu'>
-            <div className='menuPrincipal'>
-                {collections && collections.length > 0 ? (
-                    <CollectionBlock collections={collections} />
-                ) : (
-                    <p className='textp'>Nenhuma Coleção</p>
-                )}
-                <Button func={showAll} value={<FaPlus fontSize={15} />} classN='bnt-b' />
+            <div className='menuPrincipal' id='containerRolagem'>
+                {collections && collections.length > 0 ? ( <CollectionBlock collections={collections} />) : (<p className='textp'>Nenhuma Coleção</p>)}
             </div>
             {show && <FormBlock reset={setShow} updateFlag={updateFlag} setUpdateFlag={setUpdateFlag} />}
         </div>

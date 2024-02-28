@@ -1,9 +1,11 @@
 import './NavBar.css';
 import React from 'react';
-import { FaTrash, FaShare } from "react-icons/fa";
+import { FaTrash, FaShare,FaPlus } from "react-icons/fa";
 import SunfIcon from '../../assets/SunfIcon.svg';
 
-export default function NavBar() {
+
+
+export default function NavBar({showAll}) {
   return (
     <nav className='Navbar-container'>
       <ul className='Navbar-ul'>
@@ -20,6 +22,7 @@ export default function NavBar() {
         <li>
           <button className='circle-button'><FaShare/></button>
         </li>
+          <button className='circle-button' onClick={showAll}><FaPlus /></button>
       </ul>
     </nav>
   );

@@ -2,9 +2,11 @@
 
 .containerMenu {
     display: flex;
+    flex-direction: column;
+    gap: 30px;
     height: 100%;
     padding: 10px;
-    margin: 30px 30px;
+    margin: 20px 30px;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -15,5 +17,7 @@
 .menuPrincipal {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    max-height: 300px;
     gap: 50px;
 }

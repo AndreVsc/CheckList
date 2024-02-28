@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Button from '../button/Button';
-import { FaPlus } from 'react-icons/fa';
 import './MenuCheck.css';
 import FormBlock from '../forms/FormBlock';
 import CollectionBlock from '../collection/CollectionBlock';

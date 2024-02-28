@@ -6,8 +6,8 @@ import {createBrowserRouter,RouterProvider,} from "react-router-dom";
 //
 import ErrorPage from './routes/ErrorPage.jsx';
 import HomePage from './routes/HomePage.jsx';
-import Checklist from './routes/Checklist.jsx';
 import App from './app/app.jsx';
+import Kanban from './routes/Kanban.jsx';
 
 const router = createBrowserRouter([
   {
@@ -20,7 +20,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/:id",
-        element: <Checklist />, // Use the Checklist component here
+        element: <Kanban />, // Use the Checklist component here
       }
     ],
   }

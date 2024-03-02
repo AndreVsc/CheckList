@@ -10,13 +10,6 @@ export default function NavBar({showAll}) {
     <nav className='Navbar-container'>
       <ul className='Navbar-ul'>
         <li>
-          <button className='circle-button'>
-            <img src={SunfIcon} alt="" />
-          </button>
-        </li>
-      </ul>
-      <ul className='Navbar-ul'>
-        <li>
           <button className='circle-button'><FaTrash/></button>
         </li>
         <li>

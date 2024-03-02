@@ -1,4 +1,5 @@
 // Importe as bibliotecas necessárias
+import './Kanban.css';
 import React, { useState } from 'react';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 
@@ -53,46 +54,48 @@ const Kanban = () => {
   };
 
   return (
-    <DragDropContext onDragEnd={onDragEnd}>
-      {Object.keys(columns).map((columnId) => {
-        const column = columns[columnId];
-        return (
-          <div key={columnId} style={{ margin: 8 }}>
-            <h2>{column.title}</h2>
-            <Droppable droppableId={columnId} key={columnId}>
-              {(provided) => (
-                <div ref={provided.innerRef} {...provided.droppableProps} style={{ minHeight: 100, backgroundColor: '#eee', padding: 8 }}>
-                  {column.items.map((item, index) => (
-                    <Draggable key={item} draggableId={item} index={index}>
-                      {(provided) => (
-                        <div
-                          ref={provided.innerRef}
-                          {...provided.draggableProps}
-                          {...provided.dragHandleProps}
-                          style={{
-                            userSelect: 'none',
-                            padding: 16,
-                            margin: '0 0 8px 0',
-                            minHeight: '50px',
-                            backgroundColor: '#fff',
-                            border: '1px solid #ddd',
-                            borderRadius: '4px',
-                            ...provided.draggableProps.style,
-                          }}
-                        >
-                          {item}
-                        </div>
-                      )}
-                    </Draggable>
-                  ))}
-                  {provided.placeholder}
-                </div>
-              )}
-            </Droppable>
-          </div>
-        );
-      })}
-    </DragDropContext>
+    <div className="kanban-container">
+      <DragDropContext onDragEnd={onDragEnd}>
+        {Object.keys(columns).map((columnId) => {
+          const column = columns[columnId];
+          return (
+            <div key={columnId} style={{ margin: 8 }}>
+              <h2>{column.title}</h2>
+              <Droppable droppableId={columnId} key={columnId}>
+                {(provided) => (
+                  <div ref={provided.innerRef} {...provided.droppableProps} style={{ minHeight: 100, backgroundColor: '#eee', padding: 8 }}>
+                    {column.items.map((item, index) => (
+                      <Draggable key={item} draggableId={item} index={index}>
+                        {(provided) => (
+                          <div
+                            ref={provided.innerRef}
+                            {...provided.draggableProps}
+                            {...provided.dragHandleProps}
+                            style={{
+                              userSelect: 'none',
+                              padding: 16,
+                              margin: '0 0 8px 0',
+                              minHeight: '50px',
+                              backgroundColor: '#fff',
+                              border: '1px solid #ddd',
+                              borderRadius: '4px',
+                              ...provided.draggableProps.style,
+                            }}
+                          >
+                            {item}
+                          </div>
+                        )}
+                      </Draggable>
+                    ))}
+                    {provided.placeholder}
+                  </div>
+                )}
+              </Droppable>
+            </div>
+          );
+        })}
+      </DragDropContext>
+    </div>
   );
 };
 

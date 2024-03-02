@@ -11,9 +11,9 @@ export default function HomePage() {
   }
 
   return (
-    <>
+    <div>
       <NavBar showAll={showAll} setShow={setShow}/>
       <MenuCheck showAll={showAll} setShow={setShow} show={show}/>
-    </>
+    </div>
   );
 } 

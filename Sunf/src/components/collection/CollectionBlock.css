@@ -1,23 +1,33 @@
-#collectionList{
+#collectionUl {
     display: flex;
-    align-items: center;
+    max-width: 900px;
+    width: 100%;
     flex-direction: column;
-    gap: 10px;
-    padding: 20px;
+    gap: 20px;
 }
-#collectionList li{
-    border: 1px solid #c9c9c9;
-    justify-content: space-between;
-    flex-direction: row;
-    height: 80px;
-    align-items: center;
-    border-radius: 11px;
-    /* min-width: 350px; */
-    width: 340px;
-    font-size: 13px;
+
+#collectionLi {
     display: flex;
-    padding: 10px;
-    gap: 40px;
+    border-radius: 11px;
+    align-items: center;
+    background-color: #f8f8f8;
+    min-height: 50px;
+    padding: 20px;
+    transition: background-color 0.3s, box-shadow 0.3s; /* Adicionando transição */
+}
+
+#collectionLi:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    background-color: #f8f8f8;
+}
+
+
+#textList{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 13px;
+    align-items: center;
 }
 
 #collectionName{

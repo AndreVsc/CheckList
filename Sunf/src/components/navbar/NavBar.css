@@ -1,24 +1,24 @@
 .Navbar-container {
     display: flex; 
     align-items: center;
-    justify-content: space-between;
+    justify-content:flex-end;
     min-width: 100vw;
     max-width: 100vw;
     height: 60px;
     background-color: rgb(79, 81, 97);
     border-radius: 0px 0px 7px 7px;
     padding: 0 30px; /* Ajuste conforme necessário */
+    transition: height 0.15s linear;
   }
-  
-  .Navbar-container img {
-    width: 17px;
-    height: 17px;
-    filter: invert(1);
+
+  .Navbar-container:hover {
+    height: 63px;
   }
   
   .Navbar-ul {
     display: flex;
     list-style-type: none;
+    align-items: center;
     margin: 0;
     padding: 0;
     gap: 30px;
@@ -30,15 +30,17 @@
     border-radius: 50%; /* Torna o botão circular */
     padding: 10px; /* Ajuste conforme necessário */
     display: flex;
+    font-size: 13px;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, font-size 0.2s;
     color: aliceblue;
   }
   
   .circle-button:hover {
     background-color: #28282858; /* Cor de fundo do botão ao passar o mouse */
+    font-size: 15px;
   }
   
   .Navbar-container a:active {

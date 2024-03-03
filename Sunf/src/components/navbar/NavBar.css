@@ -6,13 +6,15 @@
     max-width: 100vw;
     height: 60px;
     background-color: rgb(79, 81, 97);
+    box-shadow: 0px;
     border-radius: 0px 0px 7px 7px;
     padding: 0 30px; /* Ajuste conforme necessário */
-    transition: height 0.15s linear;
+    transition: height 0.15s linear, box-shadow 0.1s;
   }
 
   .Navbar-container:hover {
     height: 63px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   }
   
   .Navbar-ul {
@@ -22,6 +24,7 @@
     margin: 0;
     padding: 0;
     gap: 30px;
+
   }
   
   .circle-button {

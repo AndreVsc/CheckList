@@ -13,12 +13,13 @@
     background-color: #f8f8f8;
     min-height: 50px;
     padding: 20px;
-    transition: background-color 0.3s, box-shadow 0.3s; /* Adicionando transição */
+    transition: background-color 0.3s, box-shadow 0.3s,min-height 0.3s; /* Adicionando transição */
 }
 
 #collectionLi:hover {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     background-color: #f8f8f8;
+    min-height: 70px;
 }
 
 

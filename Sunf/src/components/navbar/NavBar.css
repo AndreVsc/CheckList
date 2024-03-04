@@ -9,7 +9,7 @@
     box-shadow: 0px;
     border-radius: 0px 0px 7px 7px;
     padding: 0 30px; /* Ajuste conforme necessário */
-    transition: height 0.15s linear, box-shadow 0.1s;
+    transition: height 0.15s, box-shadow 0.1s;
   }
 
   .Navbar-container:hover {

@@ -5,9 +5,10 @@ import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 
 // Dados iniciais para as colunas
 const initialData = {
-  todo: { id: 'todo', title: 'A fazer', items: ['Tarefa 1', 'Tarefa 2', 'Tarefa 3'] },
-  inProgress: { id: 'inProgress', title: 'Em andamento', items: [] },
-  done: { id: 'done', title: 'Finalizado', items: [] },
+  teste:{ id: 'a', title: 'notoexto', items: ['nani'] },
+  testea:{ id: 'aa', title: 'notoexto', items: ['nan'] },
+  testeb:{ id: 'ab', title: 'notoexto', items: ['na'] },
+  testec:{ id: 'ac', title: 'notoexto', items: ['n'] },
 };
 
 const Kanban = () => {
@@ -25,26 +26,22 @@ const Kanban = () => {
       const destinationColumn = columns[destination.droppableId];
       const sourceItems = [...sourceColumn.items];
       const destinationItems = [...destinationColumn.items];
-
       // Remove o item da coluna de origem
       sourceItems.splice(source.index, 1);
-
       // Adiciona o item na coluna de destino
       destinationItems.splice(destination.index, 0, draggableId);
-
       // Atualiza o estado com as colunas modificadas
       setColumns({
-        ...columns,
-        [source.droppableId]: { ...sourceColumn, items: sourceItems },
-        [destination.droppableId]: { ...destinationColumn, items: destinationItems },
-      });
-    } else {
+          ...columns,
+          [source.droppableId]: { ...sourceColumn, items: sourceItems },
+          [destination.droppableId]: { ...destinationColumn, items: destinationItems },
+        });
+      } else {
       // Movimenta o item dentro da mesma coluna
       const column = columns[source.droppableId];
       const newItems = [...column.items];
       newItems.splice(source.index, 1);
       newItems.splice(destination.index, 0, draggableId);
-
       // Atualiza o estado com a coluna modificada
       setColumns({
         ...columns,

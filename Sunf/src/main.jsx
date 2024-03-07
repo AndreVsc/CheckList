@@ -6,7 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import ErrorPage from './routes/ErrorPage.jsx';
 import HomePage from './routes/HomePage.jsx';
 import App from './app/app.jsx';
-import Kanban from './components/kanban/Kanban.jsx';
+import KanbanPage from './routes/KanbanPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -19,7 +19,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/:id',
-        element: <Kanban />, // Use the Kanban component here
+        element: <KanbanPage />, 
       },
     ],
   },

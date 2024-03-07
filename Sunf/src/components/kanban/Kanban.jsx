@@ -1,18 +1,12 @@
-// Importe as bibliotecas necessárias
+import React, { useEffect, useState } from 'react';
 import './Kanban.css';
-import React, { useState } from 'react';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 
-// Dados iniciais para as colunas
-const initialData = {
-  teste:{ id: 'a', title: 'notoexto', items: ['nani'] },
-  testea:{ id: 'aa', title: 'notoexto', items: ['nan'] },
-  testeb:{ id: 'ab', title: 'notoexto', items: ['na'] },
-  testec:{ id: 'ac', title: 'notoexto', items: ['n'] },
-};
-
 const Kanban = () => {
-  const [columns, setColumns] = useState(initialData);
+  const [columnsData, setColumnsData] = useState({
+    todo: { title: 'A fazer', items: ['Tarefa 1', 'Tarefa 2', 'Tarefa 3'] },
+    // Adicione outras colunas conforme necessário
+  });
 
   // Função para lidar com a reordenação dos itens ao arrastar e soltar
   const onDragEnd = (result) => {
@@ -48,13 +42,13 @@ const Kanban = () => {
         [source.droppableId]: { ...column, items: newItems },
       });
     }
-  };
+  };  
 
   return (
     <div className="kanban-container">
       <DragDropContext onDragEnd={onDragEnd}>
-        {Object.keys(columns).map((columnId) => {
-          const column = columns[columnId];
+        {Object.keys(columnsData).map((columnId) => {
+          const column = columnsData[columnId];
           return (
             <div key={columnId} style={{ margin: 8 }}>
               <h2>{column.title}</h2>
